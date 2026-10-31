@@ -1,0 +1,76 @@
+{
+    "$schema": "https://opencode.ai/config.json",
+    "provider": {
+        "litellm": {
+            "npm": "@ai-sdk/openai-compatible",
+            "name": "LiteLLM",
+            "options": {
+                "baseURL": "https://api-proxy.ventionteams.com/"
+            },
+            "models": {
+                "zai-org/GL.M-5.2-claude": {
+                    "name": "GLM-5.2"
+                },
+                "deeps.eek-ai/DeepS.eek-V4-Pro-claude": {
+                    "name": "Deepseek V4 Pro"
+                },
+                "deeps.eek-ai/DeepS.eek-V4-Flash-claude": {
+                    "name": "Deepsek V4 Flash"
+                },
+                "moon.shotai/Ki.mi-K27-Code-claude": {
+                    "name": "Kimi K2.7" 
+                }
+            }
+        }
+    },
+    "mcp": {
+        "chrome-devtools": {
+            "type": "local",
+            "command": [
+                "npx",
+                "-y",
+                "chrome-devtools-mcp@latest",
+                "--browser-url=http://127.0.0.1:9222"
+            ],
+            "enabled": true
+        },
+        "github": {
+            "type": "local",
+            "command": [
+                "docker",
+                "run",
+                "-i",
+                "--rm",
+                "-e",
+                "GITHUB_PERSONAL_ACCESS_TOKEN",
+                "ghcr.io/github/github-mcp-server"
+            ],
+            "environment": {
+                "GITHUB_PERSONAL_ACCESS_TOKEN": "{env:GITHUB_ACCESS_TOKEN}"
+            },
+            "enabled": true
+        },
+        "context7": {
+            "type": "local",
+            "command": [
+                "npx",
+                "-y",
+                "@upstash/context7-mcp@latest"
+            ],
+            "enabled": true
+        },
+        "mdn": {
+            "type": "remote",
+            "url": "https://mcp.mdn.mozilla.net/",
+            "headers": {
+                "X-Moz-1st-Party-Data-Opt-Out": "1"
+            },
+            "enabled": true
+        },
+        "microsoft-learn": {
+            "type": "remote",
+            "url": "https://learn.microsoft.com/api/mcp",
+            "enabled": true
+        }
+    }
+}
