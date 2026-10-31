@@ -1,0 +1,6 @@
+@MeetSpace.Api_HostAddress = http://localhost:5231
+
+GET {{MeetSpace.Api_HostAddress}}/health
+Accept: application/json
+
+###
