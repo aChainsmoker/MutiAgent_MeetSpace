@@ -2,6 +2,16 @@
 - Проект называется MeetSpace
 - Для Backend используй ASP.NET Core, EF Core (Npgsql), Postgres, AWSSDK.S3, MiniO, JWT Bearer, Bcrypt, AutoMapper, Swagger, xUnit
 - Для Frontend используй TS, React, webpack, babel, eslint, stylelint, prettier, библиотеку компонентов Mantine, Phosphor Icons, classnames, Redux, React Router, dotenv-webpack, Jest
+- Источник требований - файл `goal.md`
+
+## Правила работы с Тикетами
+- Работай в пределах назначенного тикета.
+- Не добавляй функции, не предусмотренные тикетом.
+- Обновляй статус тикета, в зависимости от этапа
+- Статусы тикетов: Запланировано → В работе → На проверке → Завершено.
+- Статус завершено устанавливает владелец проекта вручную.
+
+
 
 ## Правила написани кода
 - Для бкенда применяются следующие правила:
